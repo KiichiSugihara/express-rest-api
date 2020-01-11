@@ -27,5 +27,12 @@ router.post('/', function(req, res) {
     }
   });
 });
+
+router.get('/:id', function(req, res) {
+  const ArticleId = req.params.id;
+  ArticleModel.findById(ArticleId, function(err, article) {
+    res.json(article);
+  });
+});
 //routerをモジュールとして扱う準備
 module.exports = router;
