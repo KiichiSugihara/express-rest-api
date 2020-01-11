@@ -2,6 +2,12 @@ const express = require('express');
 const router = express.Router();
 const UserModel = require('../../models/userModel.js');
 
+router.get('/', function(req, res) {
+  UserModel.find().then(function(users) {
+    res.json(users);
+  });
+});
+
 router.post('/', function(req, res) {
   // モデル作成．
   const User = new UserModel();
