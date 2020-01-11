@@ -34,5 +34,12 @@ router.get('/:id', function(req, res) {
     res.json(article);
   });
 });
+
+router.delete('/:id', function(req, res) {
+  const ArticleId = req.params.id;
+  ArticleModel.remove({ _id: ArticleId }).then(function() {
+    res.json({ message: 'Success!!' });
+  });
+});
 //routerをモジュールとして扱う準備
 module.exports = router;
