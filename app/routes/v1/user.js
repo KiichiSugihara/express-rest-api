@@ -29,5 +29,12 @@ router.post('/', function(req, res) {
   });
 });
 
+router.get('/:id', function(req, res) {
+  const userId = req.params.id;
+  UserModel.findById(userId, function(err, user) {
+    res.json(user);
+  });
+});
+
 //routerをモジュールとして扱う準備
 module.exports = router;
