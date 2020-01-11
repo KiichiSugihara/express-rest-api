@@ -30,16 +30,16 @@ router.post('/', function(req, res) {
 });
 
 router.get('/:id', function(req, res) {
-  const userId = req.params.id;
-  UserModel.findById(userId, function(err, user) {
+  const UserId = req.params.id;
+  UserModel.findById(UserId, function(err, user) {
     res.json(user);
   });
 });
 
 router.put('/:id', function(req, res) {
-  const userId = req.params.id;
+  const UserId = req.params.id;
 
-  UserModel.findById(userId, function(err, user) {
+  UserModel.findById(UserId, function(err, user) {
     if (err) {
       res.send(err);
     } else {
