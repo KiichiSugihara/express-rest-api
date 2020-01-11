@@ -2,7 +2,7 @@
   "name": "express-rest-api",
   "version": "1.0.0",
   "description": "REST API by express.js",
-  "main": "index.js",
+  "main": "nodemon app/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/KiichiSugihara/express-rest-api.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kiichi Sugihara",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KiichiSugihara/express-rest-api/issues"
