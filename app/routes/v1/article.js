@@ -2,6 +2,11 @@ const express = require('express');
 const router = express.Router();
 const ArticleModel = require('../../models/articleModel.js');
 
+router.get('/', function(req, res) {
+  ArticleModel.find().then(function(articles) {
+    res.json(articles);
+  });
+});
 router.post('/', function(req, res) {
   // モデル作成．
   const Article = new ArticleModel();
