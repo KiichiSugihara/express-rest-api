@@ -1,6 +1,7 @@
 const express = require('express');
 // ルーティングするで
 const router = express.Router();
+router.use('/article', require('./article.js'));
 
 // routerにルーティングの動作を書いてく
 router.get('/', function(req, res) {
